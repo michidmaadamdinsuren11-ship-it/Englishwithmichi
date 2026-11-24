@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+<header class="hero">
+    <div class="hero-content">
+        <span class="badge">Багшийн Цахим Портал & E-Portfolio</span>
+        <h1>Сайн байна уу? Би Мичидмаа багш байна</h1>
+        <p>Англи хэлний онлайн сургалт • Сургалтын материал • Даалгавар • Харилцаа холбоо</p>
+        <div class="hero-buttons">
+            <a href="#materials" class="btn btn-primary">Хичээлийн материал</a>
+            <a href="#contact" class="btn btn-secondary">Холбоо барих / Санал хүсэлт</a>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar">
+    <a href="#portfolio">Портфолио</a>
+    <a href="#schedule">Хөтөлбөр & Хуваарь</a>
+    <a href="#materials">Материал</a>
+    <a href="#assignments">Даалгавар & Сорил</a>
+    <a href="#contact">Холбоо барих</a>
+</nav>
+
+<main class="container">
+
+    <!-- 1. Мэргэжлийн хөгжил / Портфолио -->
+    <section id="portfolio" class="card">
+        <h2>Багшийн тухай & Портфолио (E-Portfolio)</h2>
+        <p>
+            Суралцагчдад англи хэлийг ойлгомжтой, системтэй, сонирхолтой байдлаар сурахад нь тусалдаг багш.
+            Энэхүү цахим орчинд хичээлийн хуваарь, сургалтын хэрэглэгдэхүүн, даалгавар болон эргэх холбооны мэдээллийг нэг дороос авах боломжтой.
+        </p>
+        <div class="grid-3">
+            <div class="mini-box">
+                <h3>Чиглэл</h3>
+                <p>Англи хэлний суурь, яриа болон шалгалтад бэлтгэх хөтөлбөр</p>
+            </div>
+            <div class="mini-box">
+                <h3>Арга зүй</h3>
+                <p>Практик хэрэглээ, тогтмол эргэх холбоо, бие даан суралцах дэмжлэг</p>
+            </div>
+            <div class="mini-box">
+                <h3>Бүтээл & Судалгаа</h3>
+                <p>Хичээлийн гарын авлага, үгийн сангийн тэмдэглэл, сургалтын материал</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Мэдээлэл түгээх: Хөтөлбөр, хуваарь, зар мэдээ -->
+    <section id="schedule" class="card">
+        <h2>Мэдээлэл, Хөтөлбөр & Хуваарь</h2>
+        <div class="notice-box">
+            <strong>Зар мэдээ:</strong> Шинэ элсэлт болон долоо хоногийн нэмэлт давтлагын хуваарь шинэчлэгдлээ.
+        </div>
+        <ul class="styled-list">
+            <li><strong>Анхан & Дунд шатны курс:</strong> Даваа, Лхагва, Баасан — Суурь дүрэм, уншлага, ярианы дадлага</li>
+            <li><strong>Шалгалтад бэлтгэх хөтөлбөр:</strong> Мягмар, Пүрэв — Академик уншлага, бичгийн бүтэц, жишиг сорил</li>
+            <li><strong>Ганцаарчилсан зөвлөгөө / Хичээл:</strong> Тохиролцсон цагийн хуваариар</li>
+        </ul>
+    </section>
+
+    <!-- 3. Сургалтын материал хүргэх -->
+    <section id="materials" class="card">
+    <h2>Сургалтын материал</h2>
+    <p>Хичээлтэй холбоотой лекц, презентац, видео болон цахим гарын авлагыг сонгон үзнэ үү:</p>
+    <div class="grid-2">
+        <div class="mini-box clickable-card" onclick="openMaterial('lecture')">
+            <h3>Лекц & Презентац</h3>
+            <p>Хичээлийн слайд, дүрмийн хураангуй, жишээ өгүүлбэрүүд.</p>
+            <span class="tag">PDF / Slides • Нээх</span>
+        </div>
+        <div class="mini-box clickable-card" onclick="openMaterial('video')">
+            <h3>Видео & Цахим ном</h3>
+            <p>Сонсгол, дуудлага, унших материалын нэмэлт эх сурвалжууд.</p>
+            <span class="tag">Video / Reading • Нээх</span>
+        </div>
+    </div>
+    <!-- Сонгосон материал нээгдэж харагдах хэсэг -->
+    <div id="material-viewer" class="material-viewer" style="display: none;">
+        <div class="viewer-header">
+            <h3 id="material-title">Материалын нэр</h3>
+            <button type="button" class="close-btn" onclick="closeMaterial()">Хаах ✕</button>
+        </div>
+        <div id="material-body"></div>
+    </div>
+    </section>
+    <!-- 4 & 5. Суралцах үйл ажиллагааг дэмжих + Үнэлгээ, эргэх холбоо -->
+   <section id="assignments" class="card">
+    <h2>Даалгавар, Төсөл, Сорил & Үнэлгээ</h2>
+    <ul class="styled-list">
+        <li><strong>Гэрийн даалгавар & Бие даалт:</strong> Долоо хоног бүрийн унших сэдэв, шинэ үгээр өгүүлбэр зохиох даалгавар</li>
+        <li><strong>Төсөл / Илтгэл:</strong> Сэдвийн хүрээнд богино танилцуулга эсвэл бичгийн ажил</li>
+        <li><strong>Сорил & Шалгалт:</strong> Доорх богино сорилыг бөглөж өөрийгөө шалгаарай</li>
+    </ul>
+    <!-- Интерактив жижиг сорил (Quiz) -->
+    <div id="quiz-box" class="quiz-box">
+        <h3>Богино Сорил: Present Simple vs Present Continuous</h3>
+        <div id="quiz-questions"></div>
+        <div class="quiz-actions">
+            <button type="button" class="btn btn-primary" onclick="checkQuiz()">Шалгах</button>
+            <button type="button" class="close-btn" onclick="resetQuiz()">Дахин эхлэх</button>
+        </div>
+        <div id="quiz-result" class="quiz-result" style="display: none;"></div>
+    </div>
+</section>
+    <!-- 6. Харилцаа холбоо (Багш, суралцагч, эцэг эх) & Санал хүсэлт -->
+    <section id="contact" class="card">
+        <h2>Харилцаа холбоо, Бүртгэл & Санал хүсэлт</h2>
+        <p>Суралцагч болон эцэг эхчүүд хичээлийн талаар асуух, бүртгүүлэх эсвэл санал хүсэлт илгээх боломжтой:</p>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Таны мэдээлэл амжилттай илгээгдлээ (жишиг форм).');">
+            <label>
+                Нэр (Суралцагч / Эцэг эх):
+                <input type="text" placeholder="Жишээ нь: Анужин" required>
+            </label>
+            <label>
+                Холбоо барих (Утас / Instagram / Имэйл):
+                <input type="text" placeholder="Жишээ нь: @username эсвэл 9911-XXXX" required>
+            </label>
+            <label>
+                Зорилго / Сонгох хэсэг:
+                <select>
+                    <option>Хичээлд бүртгүүлэх</option>
+                    <option>Даалгавар / Материалын талаар асуух</option>
+                    <option>Эцэг эхийн зүгээс холбогдох</option>
+                    <option>Санал хүсэлт / Эргэх холбоо өгөх</option>
+                </select>
+            </label>
+            <label>
+                Зурвас / Санал хүсэлт:
+                <textarea rows="4" placeholder="Асуулт эсвэл санал хүсэлтээ энд бичнэ үү..."></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Илгээх</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Багшийн Вэбсайт • Сургалт, Материал ба Харилцааны Цахим Орчин</p>
+</footer>
+<script src="script.js"></script>
